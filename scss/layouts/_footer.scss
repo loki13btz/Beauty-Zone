@@ -1,0 +1,109 @@
+.footer {
+  position: relative;
+  margin-top: -25px;
+  background-image: url(../images/contact-section-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 0;
+  @media screen and (min-width: $bp-tablet) {
+    margin-top: -49px;
+    padding: 56px 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
+  }
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+  &__logo {
+    flex-grow: 1;
+    margin-bottom: 42px;
+    @media screen and (min-width: $bp-tablet) {
+      margin-right: 16px;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 16px;
+  }
+  &__address-list {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__mobile-adress-link {
+    display: block;
+    @media screen and (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
+  &__desktop-adress-link {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
+  }
+  &__adress-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @media screen and (min-width: $bp-tablet) {
+      padding-top: 16px;
+      justify-content: left;
+    }
+  }
+  &__adress-icon {
+    fill: var(--primary-light-color);
+  }
+  &__address-info {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  &__adress-copyright {
+    font-size: 12px;
+    color: var(--secondary-light-color);
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      text-align: left;
+      z-index: 1;
+    }
+  }
+  &::after {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+      content: '';
+      background-image: url(../images/footer-img.png);
+      right: 0;
+      bottom: 0;
+      width: 238px;
+      height: 146px;
+      overflow: hidden;
+    }
+  }
+}

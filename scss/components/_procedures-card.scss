@@ -1,0 +1,28 @@
+.procedures-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 110px 4px;
+  height: 456px;
+  background: linear-gradient(
+    -179.954deg,
+    rgba(1, 28, 68, 0%) 47%,
+    rgba(1, 28, 68, 73%) 83%,
+    #011c44 99%
+  );
+  overflow: hidden;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &__text {
+    font-size: 20px;
+    padding: 24px 45px;
+    color: var(--primary-light-color);
+  }
+}

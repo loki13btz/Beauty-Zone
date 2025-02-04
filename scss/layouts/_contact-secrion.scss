@@ -1,0 +1,74 @@
+.contact-section {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+    @media screen and (min-width: $bp-desktop) {
+      padding: 0 84px;
+    }
+  }
+  &__form {
+    padding: 42px 24px;
+    border-radius: 24px;
+    background-image: url(../images/contact-section-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 422px;
+    margin-bottom: 24px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 450px;
+  }
+  &__form-title {
+    color: var(--primary-light-color);
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 24px;
+  }
+  &__button {
+    &:hover {
+      color: var(--primary-light-color);
+    }
+  }
+  &__text {
+    color: var(--secondary-light-color);
+    font-size: 12px;
+  }
+  &__privacy-policy {
+    color: var(--secondary-light-color);
+    text-decoration: underline;
+  }
+  &__map {
+    flex-shrink: 0;
+    width: 100%;
+    height: 232px;
+    @media screen and (min-width: $bp-tablet) {
+      height: 100%;
+      border: none;
+      border-radius: 16px;
+    }
+  }
+}
+
+.iframe-container {
+  margin: 24px -24px 0 -24px;
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0;
+    width: 100%;
+    align-self: stretch;
+  }
+}

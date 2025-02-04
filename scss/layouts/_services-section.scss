@@ -1,0 +1,95 @@
+.services-section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  &__container {
+    position: relative;
+    padding: 128px 0 196px 0;
+  }
+  &__text-container {
+    @media screen and (min-width: $bp-desktop) {
+      width: 60%;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 24px;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 64px;
+      font-weight: 700;
+      padding-bottom: 48px;
+    }
+  }
+  &__accent {
+    font-weight: 600;
+  }
+  &__text {
+    padding-bottom: 16px;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+    }
+  }
+  &__text-small {
+    max-width: 80%;
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 22px;
+    }
+  }
+  &__star {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    @media screen and (min-width: $bp-desktop) {
+      right: 274px;
+      top: 352px;
+    }
+  }
+
+  &__face-down {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      display: block;
+      width: 328px;
+      height: 328px;
+      border-radius: 50%;
+      top: 10px;
+      right: 100px;
+    }
+  }
+  &__face-up {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      display: block;
+      width: 328px;
+      height: 328px;
+      border-radius: 50%;
+      right: 0;
+      bottom: 10px;
+    }
+  }
+  &__small-star {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      display: block;
+      top: 70px;
+      right: 0;
+    }
+  }
+  &__extrasmall-star {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      display: block;
+      top: 270px;
+      right: 10px;
+    }
+  }
+}
+.main-accent {
+  color: var(--brand-normal-color);
+}

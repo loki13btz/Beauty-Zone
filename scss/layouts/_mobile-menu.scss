@@ -1,0 +1,54 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: var(--primary-light-color);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  &.is-open {
+    transform: translateX(0);
+  }
+  &__container {
+    padding: 20px 16px;
+  }
+  &__header {
+    margin-bottom: 32px;
+  }
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--brand-dark-color);
+  }
+  &__menu {
+    font-size: 14px;
+  }
+  &__link {
+    color: var(--brand-dark-color);
+    padding-bottom: 16px;
+    transition: color 0.3s;
+    transition: weight 0.3s;
+    &:hover {
+      color: var(--brand-normal-color);
+      font-weight: 700;
+    }
+  }
+  &__adress-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  &__adress-icon {
+    color: var(--brand-dark-color);
+  }
+}
