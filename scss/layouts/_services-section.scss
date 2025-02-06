@@ -4,7 +4,9 @@
 
   &__container {
     position: relative;
-    padding: 128px 0 196px 0;
+    @media screen and (min-width: $bp-desktop) {
+      padding: 128px 0 196px 0;
+    }
   }
   &__text-container {
     @media screen and (min-width: $bp-desktop) {
@@ -36,17 +38,41 @@
       font-size: 22px;
     }
   }
-  &__star {
+  &__star-animation {
     position: absolute;
     width: 40px;
     height: 40px;
     right: 20px;
+    animation: increase 4s infinite alternate;
     @media screen and (min-width: $bp-desktop) {
       right: 274px;
       top: 352px;
     }
   }
+  &__star {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    animation: spin 5s infinite;
+  }
 
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes increase {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   &__face-down {
     display: none;
     @media screen and (min-width: $bp-desktop) {
@@ -71,8 +97,9 @@
       bottom: 10px;
     }
   }
-  &__small-star {
+  &__small-star-animation {
     display: none;
+    animation: increase 4s infinite alternate;
     @media screen and (min-width: $bp-desktop) {
       position: absolute;
       display: block;
@@ -80,14 +107,21 @@
       right: 0;
     }
   }
-  &__extrasmall-star {
+  &__small-star {
+    animation: spin 5s infinite;
+  }
+  &__extrasmall-star-animation {
     display: none;
+    animation: increase 4s infinite alternate;
     @media screen and (min-width: $bp-desktop) {
       position: absolute;
       display: block;
       top: 270px;
       right: 10px;
     }
+  }
+  &__extrasmall-star {
+    animation: spin 5s infinite;
   }
 }
 .main-accent {

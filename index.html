@@ -136,21 +136,27 @@
               src="./images/face-up.jpg"
               alt=""
             />
-            <img
-              class="services-section__small-star"
-              src="./images/small-star.png"
-              alt=""
-            />
-            <img
-              class="services-section__extrasmall-star"
-              src="./images/extrasmall-star.png"
-              alt=""
-            />
-            <img
-              class="services-section__star"
-              src="./images/star.png"
-              alt="star"
-            />
+            <div class="services-section__small-star-animation">
+              <img
+                class="services-section__small-star"
+                src="./images/small-star.png"
+                alt=""
+              />
+            </div>
+            <div class="services-section__extrasmall-star-animation">
+              <img
+                class="services-section__extrasmall-star"
+                src="./images/extrasmall-star.png"
+                alt=""
+              />
+            </div>
+            <div class="services-section__star-animation">
+              <img
+                class="services-section__star"
+                src="./images/star.png"
+                alt="star"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -253,7 +259,7 @@
                   <article class="procedures-card">
                     <img
                       class="procedures-card__img"
-                      src="./images/facial cleansing.jpg"
+                      src="./images/facial-cleansing.jpg"
                       alt="botox-procedure"
                     />
                     <p class="procedures-card__text">Очищення обличчя</p>
@@ -263,7 +269,7 @@
                   <article class="procedures-card">
                     <img
                       class="procedures-card__img"
-                      src="./images/facial cleansing.jpg"
+                      src="./images/facial-cleansing.jpg"
                       alt="botox-procedure"
                     />
                     <p class="procedures-card__text">Очищення обличчя</p>
@@ -273,7 +279,7 @@
                   <article class="procedures-card">
                     <img
                       class="procedures-card__img"
-                      src="./images/facial cleansing.jpg"
+                      src="./images/facial-cleansing.jpg"
                       alt="botox-procedure"
                     />
                     <p class="procedures-card__text">Очищення обличчя</p>
@@ -283,7 +289,7 @@
                   <article class="procedures-card">
                     <img
                       class="procedures-card__img"
-                      src="./images/facial cleansing.jpg"
+                      src="./images/facial-cleansing.jpg"
                       alt="botox-procedure"
                     />
                     <p class="procedures-card__text">Очищення обличчя</p>
@@ -329,8 +335,9 @@
                     type="name"
                     id="user-name"
                     name="user-name"
-                    autocomplete="off"
                     placeholder="Ваше ім'я та прізвище"
+                    pattern="[А-Я][а-я]+\s[А-Я][а-я]+"
+                    required
                   />
                 </div>
                 <div class="contact-section__form-field input">
@@ -342,8 +349,11 @@
                     type="tel"
                     id="user-tel"
                     name="user-tel"
-                    autocomplete="off"
-                    placeholder="Ваш номер телeфону"
+                    placeholder="Ваш номер телeфону в форматі +380ХХХХХХХХХ"
+                    pattern="\+380\d{9}"
+                    minlength="13"
+                    maxlength="13"
+                    required
                   />
                 </div>
                 <div class="contact-section__form-field input">
@@ -355,8 +365,9 @@
                     type="email"
                     id="user-email"
                     name="user-email"
-                    autocomplete="off"
                     placeholder="Ваша електронна пошта"
+                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                    required
                   />
                 </div>
                 <button class="contact-section__button button">

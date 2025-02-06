@@ -15,6 +15,7 @@
     border-radius: 24px;
     color: var(--primary-light-color);
     background-color: transparent;
+    transition: background-color 0.2s;
   }
   &__control:focus {
     background-color: var(--secondary-light-color);
