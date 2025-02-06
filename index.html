@@ -543,6 +543,7 @@
               minlength="2"
               maxlength="20"
               placeholder="Ваше ім'я та прізвище"
+              pattern="[А-Я][а-я]+\s[А-Я][а-я]+"
               required
             />
           </div>
@@ -556,7 +557,10 @@
               type="tel"
               id="user-tel"
               name="user-tel"
-              placeholder="Ваш номер телефону"
+              placeholder="Ваш номер телeфону в форматі +380ХХХХХХХХХ"
+              pattern="\+380\d{9}"
+              minlength="13"
+              maxlength="13"
               required
             />
           </div>
@@ -571,6 +575,7 @@
               id="user-email"
               name="user-email"
               placeholder="Ваша електронна пошта"
+              pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
               required
             />
           </div>
